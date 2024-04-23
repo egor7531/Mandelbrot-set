@@ -3,13 +3,13 @@ all: compile link
 test: compile link run
 
 compile:
-	g++ -c *.cpp -IC:\SFML-2.6.1\include
+	g++ -c Main.cpp -IC:\SFML-2.6.1\include
 
 link:
-	g++ *.o -o main -LC:\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system -lmingw32 -lsfml-main
+	g++ Main.o -o Main -LC:\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system
 
 clean:
 	del *.o
 
 run:	
-	main.exe
+	Main.exe
