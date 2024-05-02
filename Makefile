@@ -3,10 +3,10 @@ all: compile link
 test: compile link run
 
 compile:
-	g++ -c Main.cpp -IC:\SFML-2.6.1\include
+	g++ -mavx512vl -c *.cpp -IC:\SFML-2.6.1\include
 
 link:
-	g++ Main.o -o Main -LC:\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system
+	g++ *.o -o Main -LC:\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system
 
 clean:
 	del *.o
